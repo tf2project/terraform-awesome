@@ -1,13 +1,14 @@
 # https://github.com/ssbostan/terraform-awesome
 
-resource "docker_image" "sample_image" {
-  name = "sample_image"
+resource "docker_image" "simple_image" {
+  name = "simple_image"
   build {
     path = "."
-    tag  = ["sample_image:latest"]
+    tag  = [
+      "simple_image:latest"
+    ]
     build_arg = {
-      USER  = "Saeid"
-      CLASS = "DevOps"
+      NAME = "Terraform Awesome"
     }
   }
 }
