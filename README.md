@@ -28,7 +28,7 @@ If you find any **bugs** in the examples, please file an issue.
  - [ ] Adding AWS provider examples
  - [ ] Adding GCP provider examples
  - [ ] Adding Azure provider examples
- - [ ] Adding Docker provider examples
+ - [ ] Adding Docker provider examples **IN PROGRESS**
  - [ ] Adding Kubernetes provider examples
  - [ ] Adding Archive provider examples
  - [ ] Adding External provider examples
@@ -50,3 +50,7 @@ If you find any **bugs** in the examples, please file an issue.
  - [ ] Adding Ngrok provider examples
  - [ ] Adding Rancher2 provider examples
  - [ ] Adding RKE provider examples
+
+## Developed with love by contributors:
+
+<a><img src="https://contrib.rocks/image?repo=ssbostan/terraform-awesome"></a>
