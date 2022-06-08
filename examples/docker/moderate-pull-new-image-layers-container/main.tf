@@ -6,5 +6,7 @@ data "docker_registry_image" "alpine" {
 
 resource "docker_image" "ubuntu" {
   name          = data.docker_registry_image.alpine.name
-  pull_triggers = [data.docker_registry_image.alpine.sha256_digest]
+  pull_triggers = [
+    data.docker_registry_image.alpine.sha256_digest
+  ]
 }
