@@ -1,9 +1,11 @@
-FROM python:3.8.2-alpine
+FROM python:alpine
 
-COPY . /app
+EXPOSE 5000
 
 WORKDIR /app
 
+COPY . .
+
 RUN apk add curl --no-cache && pip install -r requirements.txt
 
-CMD ["python", "app.py"]:
+CMD ["python", "app.py"]
