@@ -9,5 +9,4 @@ resource "docker_container" "redis_container" {
   image      = docker_image.redis_image.name
   memory     = 1024
   cpu_shares = 2
-  
 }

@@ -4,7 +4,7 @@ resource "docker_image" "simple_image" {
   name = "simple_image"
   build {
     path = "."
-    tag  = [
+    tag = [
       "simple_image:latest"
     ]
     build_arg = {
