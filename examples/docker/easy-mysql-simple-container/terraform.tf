@@ -1,5 +1,4 @@
 # https://github.com/ssbostan/terraform-awesome
-
 terraform {
   required_providers {
     docker = {
