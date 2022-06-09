@@ -17,6 +17,11 @@ resource "docker_container" "mysql_container" {
     name    = docker_network.backend.name
     aliases = ["backend"]
   }
+  volumes {
+    container_path = "/var/lib/mysql"
+    #    volume_name    = docker_volume.mysql_volume.name
+    host_path = "/opt/mysql"
+  }
 }
 
 resource "docker_container" "phpmyadmin_container" {
