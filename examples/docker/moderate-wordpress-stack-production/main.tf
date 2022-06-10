@@ -25,6 +25,7 @@ resource "docker_container" "db" {
     external = "3306"
   }
 }
+
 resource "docker_container" "wordpress" {
   name         = "wordpress"
   image        = "wordpress:latest"
