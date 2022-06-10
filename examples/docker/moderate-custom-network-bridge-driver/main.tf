@@ -1,7 +1,8 @@
 # https://github.com/ssbostan/terraform-awesome
 
 resource "docker_network" "custom_network" {
-  name = "custom_network"
+  name   = "custom_network"
+  driver = "bridge"
   ipam_config {
     ip_range = "172.28.5.0/24"
     subnet   = "172.28.0.0/16"
