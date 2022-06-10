@@ -9,5 +9,5 @@ resource "docker_container" "redis_container" {
   image      = docker_image.redis_image.name
   memory     = var.redis_memory
   cpu_shares = var.redis_cpu_shares
-  env = ["REDIS_ARGS=${var.redis_ARGS}"]
+  env        = ["REDIS_ARGS=${var.redis_ARGS}"]
 }
