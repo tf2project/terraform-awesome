@@ -50,6 +50,8 @@ If you find any **bugs** in the examples, please file an issue.
  - [ ] Adding Ngrok provider examples
  - [ ] Adding Rancher2 provider examples
  - [ ] Adding RKE provider examples
+ - [ ] Adding Letsencrypt provider examples
+ - [ ] Adding MAAS provider examples
 
 ## Developed with love by contributors:
 
