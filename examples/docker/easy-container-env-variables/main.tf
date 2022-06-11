@@ -7,7 +7,7 @@ resource "docker_image" "redis_image" {
 resource "docker_container" "redis_container" {
   name       = "redis_container"
   image      = docker_image.redis_image.name
-  memory     = var.redis_memory
-  cpu_shares = var.redis_cpu_shares
-  env        = ["REDIS_ARGS=${var.redis_ARGS}"]
+  memory     = 1024
+  cpu_shares = 2
+  env        = ["REDIS_ARGS=--requirepass redis-stack"]
 }
