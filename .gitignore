@@ -1,3 +1,8 @@
+*.key
+*.cert
+*.pem
+*.crt
+
 .terraform.lock.hcl
 
 # Local .terraform directories
