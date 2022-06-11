@@ -10,7 +10,7 @@ resource "docker_container" "container_003" {
   userns_mode  = "terraformawesome:165536:65536"
   pid_mode     = "host"
   ipc_mode     = "host"
-  network_mode = "host"
+  network_mode = "host" 
 }
 
 
