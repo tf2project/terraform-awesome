@@ -17,7 +17,6 @@ resource "tls_self_signed_cert" "cert" {
     organization = "Terraform Awesome, Inc"
     country      = "IR"
   }
-
 }
 
 resource "local_file" "private_key" {
