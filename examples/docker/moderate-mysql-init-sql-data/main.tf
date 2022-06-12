@@ -16,7 +16,7 @@ resource "docker_container" "mysql_container" {
   networks_advanced {
     name = docker_network.backend.name
   }
-    volumes {
+  volumes {
     host_path      = abspath("init.sql")
     container_path = "/docker-entrypoint-initdb.d/init.sql"
   }
