@@ -13,9 +13,7 @@ resource "tls_self_signed_cert" "cert" {
     "server_auth",
   ]
   subject {
-    common_name  = "terraformawesome.com"
-    organization = "Terraform Awesome, Inc"
-    country      = "IR"
+    common_name  = "www.terraformawesome.com"
   }
 }
 
