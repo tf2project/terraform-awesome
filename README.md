@@ -29,7 +29,7 @@ If you find any **bugs** in the examples, please file an issue.
  - [ ] Adding GCP provider examples
  - [ ] Adding Azure provider examples
  - [ ] Adding Docker provider examples **IN PROGRESS**
- - [ ] Adding Kubernetes provider examples
+ - [ ] Adding Kubernetes provider examples **IN PROGRESS**
  - [ ] Adding Archive provider examples
  - [ ] Adding External provider examples
  - [ ] Adding Cloud-init provider examples
@@ -38,7 +38,7 @@ If you find any **bugs** in the examples, please file an issue.
  - [ ] Adding Random provider examples
  - [ ] Adding Helm provider examples
  - [ ] Adding HTTP provider examples
- - [ ] Adding TLS provider examples
+ - [ ] Adding TLS provider examples **IN PROGRESS**
  - [ ] Adding Time provider examples
  - [ ] Adding Vault provider examples
  - [ ] Adding Cloudflare provider examples
