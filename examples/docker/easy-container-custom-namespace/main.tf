@@ -10,5 +10,5 @@ resource "docker_container" "container_003" {
   userns_mode  = "host"
   pid_mode     = "host"
   ipc_mode     = "host"
-  network_mode = "host" 
+  network_mode = "host"
 }
