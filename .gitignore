@@ -2,6 +2,7 @@
 *.cert
 *.pem
 *.crt
+*.csr
 
 .terraform.lock.hcl
 
