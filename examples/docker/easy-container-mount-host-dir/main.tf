@@ -8,7 +8,7 @@ resource "docker_container" "nginx_container" {
   name  = "nginx_container"
   image = docker_image.nginx_image.name
   volumes {
-    host_path      = "/etc/nginx/conf.d/app.conf"
-    container_path = "/etc/nginx/conf.d/app.conf"
+    host_path      = "/opt/nginx/nginx.conf"
+    container_path = "/etc/nginx/nginx.conf"
   }
 }
