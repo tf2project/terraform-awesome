@@ -14,10 +14,10 @@ resource "kubernetes_pod" "nginx" {
       name  = "nginx"
       image = "nginx:latest"
       readiness_probe {
-        http_get {
-          path = "/"
-          port = 80
+        exec {
+          command = [ "ls -lhtar /var/www/html" ]
         }
+ 
         initial_delay_seconds = 30
         timeout_seconds = 10
         period_seconds = 10
