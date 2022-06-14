@@ -5,13 +5,11 @@ resource "docker_image" "nginx_image" {
 }
 
 resource "docker_container" "nginx_container" {
-  name  = "nginx_container"
-  image = docker_image.nginx_image.name
-  upload {
-    file   = "/data/file"
-    source = "file"
-
+  name   = "nginx_container"
+  image  = docker_image.nginx_image.name
+  memory = 1024
+  ports {
+    internal = "80"
+    external = "80"
   }
-
 }
-
