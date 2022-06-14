@@ -13,6 +13,16 @@ resource "kubernetes_pod" "nginx" {
     container {
       name  = "nginx"
       image = "nginx:latest"
+      readiness_probe {
+        http_get {
+          path = "/"
+          port = 80
+        }
+        initial_delay_seconds = 30
+        timeout_seconds = 10
+        period_seconds = 10
+        failure_threshold = 3
+      }
       port {
         name           = "http"
         protocol       = "TCP"
