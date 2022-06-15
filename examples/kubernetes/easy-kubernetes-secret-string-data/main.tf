@@ -1,8 +1,8 @@
 # https://github.com/ssbostan/terraform-awesome
 
-resource "kubernetes_secret" "simple-secret" {
+resource "kubernetes_secret" "mysecret" {
   metadata {
-    name      = "simple-secret"
+    name      = "mysecret"
     namespace = "default"
     labels = {
       "app.kubernetes.io/name"       = "simple-secret"
@@ -11,6 +11,6 @@ resource "kubernetes_secret" "simple-secret" {
     }
   }
   data = {
-    simple-secret = "secret-text"
+    "secret_key" = "value"
   }
 }
