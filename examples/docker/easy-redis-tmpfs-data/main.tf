@@ -19,22 +19,7 @@ resource "docker_container" "redis_container" {
     label = "container.docker.com/created-by"
     value = "Terraform Awesome"
   }
-
-  mounts {
-    target    = "/data"
-    type      = "tmpfs"
-    read_only = false
-    volume_options {
-      driver_name = "name"
-      driver_options = {
-        type : "tmpfs"
-        device : "tmpfs"
-        o : "size=100m,uid=1000"
-      }
-      labels {
-        label = "volume.docker.com/created-by"
-        value = "Terraform Awesome"
-      }
-    }
+  tmpfs = {
+    "/data" = "rw,noexec,nosuid"
   }
 }
