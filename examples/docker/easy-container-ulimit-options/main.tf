@@ -1,16 +1,9 @@
 # https://github.com/ssbostan/terraform-awesome
 
-resource "docker_image" "redis_image" {
-  name = "redis:latest"
-}
-
-resource "docker_container" "redis_container" {
-  name  = "redis_container"
-  image = docker_image.redis_image.name
-  ports {
-    internal = 6379
-    external = 6379
-  }
+resource "docker_container" "alpine_container" {
+  name    = "alpine_container"
+  image   = "alpine:latest"
+  command = ["sleep", "1000"]
   ulimit {
     name = "core"
     soft = 1
