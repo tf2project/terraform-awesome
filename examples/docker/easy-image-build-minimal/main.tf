@@ -3,13 +3,11 @@
 resource "docker_image" "simple_image" {
   name = "simple_image"
   build {
-    path = "./app/"
+    path = "app"
     tag  = ["simple_image:latest"]
-    build_arg = {
-      foo : "zoo"
-    }
     label = {
-      author : "Terraform Awesome"
+      "app.docker.io/name"       = "nginx"
+      "app.docker.io/created-by" = "terraform-awesome"
     }
   }
 }
