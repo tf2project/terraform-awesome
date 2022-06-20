@@ -1,13 +1,17 @@
 # https://github.com/ssbostan/terraform-awesome
 
-resource "kubernetes_namespace" "nginx" {
+resource "kubernetes_namespace" "namespace_awesome" {
   metadata {
-    name = "terraform-namespace"
+    annotations = {
+      name = "terraform-awsome-namespace"
+    }
+
     labels = {
-      "app.kubernetes.io/name"       = "nginx"
+      "app.kubernetes.com/name"      = "namespace_awesome"
       "app.kubernetes.io/created-by" = "terraform-awesome"
     }
+
+    name = "terraform-awsome-namespace"
   }
 }
-
 
