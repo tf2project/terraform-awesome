@@ -1,16 +1,7 @@
 # https://github.com/ssbostan/terraform-awesome
 
-resource "docker_network" "backend" {
-  name = "backend"
-}
-
-resource "docker_network" "frontend" {
-  name = "frontend"
-}
-
 resource "docker_volume" "mysql_data" {
-  name   = "mysql_data"
-  driver = "local"
+  name = "mysql_data"
 }
 
 resource "docker_container" "mysql_container" {
@@ -22,9 +13,6 @@ resource "docker_container" "mysql_container" {
     "MYSQL_USER=test",
     "MYSQL_PASSWORD=test"
   ]
-  networks_advanced {
-    name = docker_network.backend.name
-  }
   volumes {
     volume_name    = docker_volume.mysql_data.name
     container_path = "/var/lib/mysql"
@@ -36,18 +24,12 @@ resource "docker_container" "phpmyadmin_container" {
   image = "phpmyadmin/phpmyadmin:latest"
   env = [
     "PMA_ARBITRARY=1",
-    "PMA_HOST=${docker_container.mysql_container.name}",
+    "PMA_HOST=${docker_container.mysql_container.network_data[0].ip_address}",
     "PMA_USER=test",
     "PMA_PASSWORD=test"
   ]
   ports {
     internal = 80
     external = 8080
-  }
-  networks_advanced {
-    name = docker_network.backend.name
-  }
-  networks_advanced {
-    name = docker_network.frontend.name
   }
 }
