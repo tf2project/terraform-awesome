@@ -2,7 +2,7 @@
 
 resource "kubernetes_service_account" "example" {
   metadata {
-    name      = "example"
+    name      = "terraform-example"
     namespace = "default"
     labels = {
       "app.kubernetes.io/name"       = "example"
