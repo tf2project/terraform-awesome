@@ -5,7 +5,7 @@ resource "kubernetes_service_account" "example" {
     name      = "example"
     namespace = "default"
     labels = {
-      "app.kubernetes.io/name"       = "nginx"
+      "app.kubernetes.io/name"       = "example"
       "app.kubernetes.io/created-by" = "terraform-awesome"
     }
   }
