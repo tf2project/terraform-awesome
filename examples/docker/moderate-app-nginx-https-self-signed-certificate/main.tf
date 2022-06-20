@@ -33,6 +33,10 @@ resource "docker_container" "nginx_container" {
     label = "app.docker.io/name"
     value = "nginx"
   }
+  labels {
+    label = "app.docker.io/created-by"
+    value = "terraform-awesome"
+  }
   depends_on = [
     local_file.nginx_https_tls_key,
     local_file.nginx_https_tls_cert
