@@ -2,7 +2,7 @@
 
 resource "kubernetes_service_account" "simple_service_account" {
   metadata {
-    generate_name = "simple-service-account"
+    name = "simple-service-account"
     labels = {
       "app.kubernetes.io/created-by" = "terraform-awesome"
     }
