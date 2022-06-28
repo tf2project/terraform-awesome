@@ -1,26 +1,20 @@
 # https://github.com/ssbostan/terraform-awesome
 
-resource "kubernetes_service_account" "terraform-awesome" {
-
+resource "kubernetes_service_account" "simple_service_account" {
   metadata {
-    generate_name = "terraform-awesome-"
+    generate_name = "simple-service-account"
     labels = {
-      "app.kubernetes.io/name"       = "awesome-account"
       "app.kubernetes.io/created-by" = "terraform-awesome"
     }
   }
-
   secret {
-    name = kubernetes_secret.terraform-awesome.metadata.0.name
+    name = kubernetes_secret.simple_service_account_secret.metadata.0.name
   }
-
   automount_service_account_token = false
 }
 
-resource "kubernetes_secret" "terraform-awesome" {
-
+resource "kubernetes_secret" "simple_service_account_secret" {
   metadata {
-    name = "awesome"
+    name = "simple-service-account"
   }
-
 }
