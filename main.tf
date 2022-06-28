@@ -10,6 +10,6 @@ resource "kubernetes_secret" "secret_base64" {
     }
   }
   data = {
-    "mydata" = filebase64("${path.module}/mydata")
+    "mydata" = "aGVsbG8gd29ybGQ=" #encode hello world with base64
     }
 }
