@@ -1,0 +1,1 @@
+examples/kubernetes/easy-kubernetes-pod-configmap-volume-mount/README.md
