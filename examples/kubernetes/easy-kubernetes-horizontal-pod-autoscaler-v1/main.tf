@@ -1,3 +1,5 @@
+# https://github.com/ssbostan/terraform-awesome
+
 resource "kubernetes_horizontal_pod_autoscaler_v1" "pod_auto_scaler" {
   metadata {
     name = "nginx-auto-scaler"
