@@ -15,8 +15,8 @@ resource "kubernetes_horizontal_pod_autoscaler_v2" "pod_auto_scaler_v2" {
     max_replicas = 10
 
     scale_target_ref {
-      kind = "Deployment"
-      name = "nginx"
+      kind        = "Deployment"
+      name        = "nginx"
       api_version = "apps/v1"
     }
 
@@ -43,11 +43,11 @@ resource "kubernetes_horizontal_pod_autoscaler_v2" "pod_auto_scaler_v2" {
       resource {
         name = "cpu"
         target {
-          type = "Utilization"
+          type                = "Utilization"
           average_utilization = "50"
+        }
       }
     }
-  }
     behavior {
       scale_down {
         stabilization_window_seconds = 30
