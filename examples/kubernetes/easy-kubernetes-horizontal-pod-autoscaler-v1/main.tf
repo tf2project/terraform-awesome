@@ -2,7 +2,7 @@
 
 resource "kubernetes_horizontal_pod_autoscaler_v1" "pod_auto_scaler" {
   metadata {
-    name = "nginx-auto-scaler"
+    name = "nginx"
     labels = {
       "app.kubernetes.io/name"       = "nginx"
       "app.kubernetes.io/created-by" = "terraform-awesome"
