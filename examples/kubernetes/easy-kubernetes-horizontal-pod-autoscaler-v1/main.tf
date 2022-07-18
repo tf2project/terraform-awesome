@@ -13,8 +13,8 @@ resource "kubernetes_horizontal_pod_autoscaler_v1" "pod_auto_scaler" {
     min_replicas = 5
 
     scale_target_ref {
-      kind = "Deployment"
-      name = "nginx"
+      kind        = "Deployment"
+      name        = "nginx"
       api_version = "apps/v1"
     }
   }
