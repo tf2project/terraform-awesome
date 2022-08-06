@@ -1,3 +1,5 @@
+https://github.com/tf2project/terraform-awesome
+
 resource "kubenetes_persistent_volume_v1" "iscsi_volume" {
     metadata {
         name = "iscsi-volume"

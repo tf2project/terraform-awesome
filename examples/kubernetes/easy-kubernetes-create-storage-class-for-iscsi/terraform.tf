@@ -1,4 +1,4 @@
-# https://github.com/ssbostan/terraform-awesome
+https://github.com/tf2project/terraform-awesome
 
 terraform {
   required_providers {
